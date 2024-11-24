@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>24. نوامبر - تم کریسمس</title>
+  <title>3. Dezember - تم کریسمس</title>
   <style>
     body {
       margin: 0;
@@ -13,8 +12,8 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background: #1b5e20; /* ساده‌تر: یک رنگ ثابت */
-      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #004d40, #1b5e20); /* سبز گرم زمستانی */
+      font-family: "B Titr", Arial, sans-serif;
       color: white;
       direction: rtl;
     }
@@ -22,53 +21,95 @@
     .container {
       text-align: center;
       background: #fff;
-      border-radius: 10px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
       padding: 20px;
-      width: 90%; /* بهتر برای موبایل */
-      max-width: 300px;
+      width: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container:before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 0, 0, 0.5);
+      border-radius: 50%;
+      animation: move-circle 8s infinite;
+    }
+
+    .container:after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 215, 0, 0.5);
+      border-radius: 50%;
+      animation: move-circle 6s infinite;
+    }
+
+    @keyframes move-circle {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(30px, 30px);
+      }
     }
 
     h1 {
-      font-size: 48px; /* ساده‌تر و کوچکتر برای موبایل */
+      font-size: 60px;
       margin: 0;
-      color: #e53935;
+      color: #e53935; /* قرمز کریسمسی */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     h2 {
-      font-size: 20px;
+      font-size: 24px;
       margin: 10px 0 20px;
-      color: #388e3c;
+      color: #388e3c; /* سبز زمستانی */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     .button {
       display: inline-block;
-      background: #ff9800; /* ساده‌تر: یک رنگ ثابت */
+      background: linear-gradient(to right, #ff9800, #ff5722); /* طلایی و نارنجی */
       color: white;
       padding: 10px 20px;
-      border-radius: 5px; /* ساده‌تر */
-      font-size: 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
       font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       cursor: pointer;
-      border: none;
     }
 
     .button:hover {
-      background: #ffa726; /* کمی روشن‌تر هنگام هاور */
+      background: linear-gradient(to right, #ffd700, #ff4500); /* طلایی روشن */
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     }
 
     .hidden-message {
       display: none;
       margin-top: 20px;
-      color: #333;
-      background: #fce4ec;
+      color: #333; /* متن تیره */
+      background: #fce4ec; /* پس‌زمینه ملایم */
       padding: 15px;
       border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       text-align: center;
     }
 
     .hidden-message h3 {
       margin: 0 0 10px;
-      color: #d32f2f;
+      color: #d32f2f; /* قرمز ملایم */
     }
 
     .hidden-message p {
@@ -87,44 +128,36 @@
       font-size: 24px;
       margin-top: 10px;
     }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 36px;
-      }
-
-      h2 {
-        font-size: 18px;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>24</h1>
-    <h2>نوامبر</h2>
+    <h1>3</h1>
+    <h2>Dezember</h2>
     <button class="button" id="reveal-button">باز کردن روز</button>
     <div class="hidden-message" id="hidden-message">
-      <h3>Omid 😍😍😍</h3>
-      <p>نیوشا خیلی دوست داره ، روز خوبی داشته باشی 🚀🌶️</p>
-      <p>زود بیا خونه 😍🥰❤️</p>
+      <h3>ای همه شکل تو زیبا، همه زینت تو خوب</h3>
+      <p>حسن صورت در تو افزون، حسن سیرت در تو ژرف</p>
       <div class="deutung">
-        <strong>فال:</strong> امروز روز خوبی برای شماست تا به اهداف و آرزوهای خود توجه بیشتری داشته باشید. در حالی که ممکن است برخی چالش‌ها سر راه شما قرار بگیرند، اما با صبر و هوش خود قادر خواهید بود به راحتی از آن‌ها عبور کنید. در روابط عاطفی، به صدای قلب خود گوش دهید و از احساساتتان نترسید.
-        <br><br>
-        شما توانایی خلق تغییرات مثبت را دارید، فقط باید به خودتان اعتماد کنید. فرصت‌های جدید در مسیر شما قرار دارد که می‌تواند شما را به جایی که می‌خواهید برساند.
+        <strong>Deutung:</strong> Dein Wunsch steht unter einem guten Stern. Deine innere und äußere Stärke ziehen positive Ereignisse in dein Leben. Wenn du nach etwas suchst, wird es bald Realität, solange du geduldig und entschlossen bleibst. Erfolg ist nahe! 🌟
       </div>
-      <div class="emoji">🚀🚀🚀🚀</div>
+      <div class="emoji">😊</div>
+      <p> Möge dein Tag voller Licht und Freude sein! </p>
     </div>
   </div>
 
   <script>
+    let clickCount = 0; // شمارش تعداد کلیک‌ها
     const button = document.getElementById("reveal-button");
     const hiddenMessage = document.getElementById("hidden-message");
 
-    // Zeige die Nachricht sofort nach einem Klick
     button.addEventListener("click", () => {
-      hiddenMessage.style.display = "block";
-      button.style.display = "none"; // Verstecke den Button
+      clickCount++; // افزایش تعداد کلیک‌ها
+      if (clickCount === 1) {
+        // نمایش پیام پس از ۳ بار کلیک
+        hiddenMessage.style.display = "block";
+        button.style.display = "none"; // حذف دکمه
+      }
     });
   </script>
 </body>
