@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3. Dezember - تم کریسمس</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #004d40, #1b5e20); /* سبز گرم زمستانی */
+      font-family: "B Titr", Arial, sans-serif;
+      color: white;
+      direction: rtl;
+    }
+
+    .container {
+      text-align: center;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      width: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container:before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 0, 0, 0.5);
+      border-radius: 50%;
+      animation: move-circle 8s infinite;
+    }
+
+    .container:after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 215, 0, 0.5);
+      border-radius: 50%;
+      animation: move-circle 6s infinite;
+    }
+
+    @keyframes move-circle {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(30px, 30px);
+      }
+    }
+
+    h1 {
+      font-size: 60px;
+      margin: 0;
+      color: #e53935; /* قرمز کریسمسی */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 10px 0 20px;
+      color: #388e3c; /* سبز زمستانی */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .button {
+      display: inline-block;
+      background: linear-gradient(to right, #ff9800, #ff5722); /* طلایی و نارنجی */
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: linear-gradient(to right, #ffd700, #ff4500); /* طلایی روشن */
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      color: #333; /* متن تیره */
+      background: #fce4ec; /* پس‌زمینه ملایم */
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .hidden-message h3 {
+      margin: 0 0 10px;
+      color: #d32f2f; /* قرمز ملایم */
+    }
+
+    .hidden-message p {
+      margin: 5px 0;
+      color: #444;
+    }
+
+    .hidden-message .deutung {
+      margin-top: 15px;
+      font-style: italic;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .hidden-message .emoji {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>3</h1>
+    <h2>Dezember</h2>
+    <button class="button" id="reveal-button">باز کردن روز</button>
+    <div class="hidden-message" id="hidden-message">
+      <h3>ای همه شکل تو زیبا، همه زینت تو خوب</h3>
+      <p>حسن صورت در تو افزون، حسن سیرت در تو ژرف</p>
+      <div class="deutung">
+        <strong>Deutung:</strong> Dein Wunsch steht unter einem guten Stern. Deine innere und äußere Stärke ziehen positive Ereignisse in dein Leben. Wenn du nach etwas suchst, wird es bald Realität, solange du geduldig und entschlossen bleibst. Erfolg ist nahe! 🌟
+      </div>
+      <div class="emoji">😊</div>
+      <p> Möge dein Tag voller Licht und Freude sein! </p>
+    </div>
+  </div>
+
+  <script>
+    let clickCount = 0; // شمارش تعداد کلیک‌ها
+    const button = document.getElementById("reveal-button");
+    const hiddenMessage = document.getElementById("hidden-message");
+
+    button.addEventListener("click", () => {
+      clickCount++; // افزایش تعداد کلیک‌ها
+      if (clickCount === 3) {
+        // نمایش پیام پس از ۳ بار کلیک
+        hiddenMessage.style.display = "block";
+        button.style.display = "none"; // حذف دکمه
+      }
+    });
+  </script>
+</body>
+</html>
