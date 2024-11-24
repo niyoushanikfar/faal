@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3. Dezember - تم کریسمس</title>
+  <title>24 November - تم کریسمس</title>
   <style>
     body {
       margin: 0;
@@ -24,42 +25,8 @@
       border-radius: 20px;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
       padding: 20px;
-      width: 300px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .container:before {
-      content: "";
-      position: absolute;
-      top: -50px;
-      left: -50px;
-      width: 200px;
-      height: 200px;
-      background: rgba(255, 0, 0, 0.5);
-      border-radius: 50%;
-      animation: move-circle 8s infinite;
-    }
-
-    .container:after {
-      content: "";
-      position: absolute;
-      bottom: -50px;
-      right: -50px;
-      width: 150px;
-      height: 150px;
-      background: rgba(255, 215, 0, 0.5);
-      border-radius: 50%;
-      animation: move-circle 6s infinite;
-    }
-
-    @keyframes move-circle {
-      0%, 100% {
-        transform: translate(0, 0);
-      }
-      50% {
-        transform: translate(30px, 30px);
-      }
+      width: 90%; /* Responsive width for mobile */
+      max-width: 300px;
     }
 
     h1 {
@@ -117,13 +84,6 @@
       color: #444;
     }
 
-    .hidden-message .deutung {
-      margin-top: 15px;
-      font-style: italic;
-      font-size: 14px;
-      color: #555;
-    }
-
     .hidden-message .emoji {
       font-size: 24px;
       margin-top: 10px;
@@ -132,33 +92,31 @@
 </head>
 <body>
   <div class="container">
-    <h1>3</h1>
-    <h2>Dezember</h2>
-    <button class="button" id="reveal-button">باز کردن روز</button>
+    <h1>24</h1>
+    <h2>November</h2>
+    <button class="button" id="reveal-button">باز کردن</button>
     <div class="hidden-message" id="hidden-message">
-      <h3>ای همه شکل تو زیبا، همه زینت تو خوب</h3>
-      <p>حسن صورت در تو افزون، حسن سیرت در تو ژرف</p>
+      <h3>Omid 😍😍😍</h3>
+      <p>نیوشا خیلی دوست داره ، روز خوبی داشته باشی 🚀🌶️</p>
+      <p>زود بیا خونه 😍🥰❤️</p>
       <div class="deutung">
-        <strong>Deutung:</strong> Dein Wunsch steht unter einem guten Stern. Deine innere und äußere Stärke ziehen positive Ereignisse in dein Leben. Wenn du nach etwas suchst, wird es bald Realität, solange du geduldig und entschlossen bleibst. Erfolg ist nahe! 🌟
+        <strong>فال:</strong> امروز روز خوبی برای شماست تا به اهداف و آرزوهای خود توجه بیشتری داشته باشید. در حالی که ممکن است برخی چالش‌ها سر راه شما قرار بگیرند، اما با صبر و هوش خود قادر خواهید بود به راحتی از آن‌ها عبور کنید. در روابط عاطفی، به صدای قلب خود گوش دهید و از احساساتتان نترسید.
+        <br><br>
+        شما توانایی خلق تغییرات مثبت را دارید، فقط باید به خودتان اعتماد کنید. فرصت‌های جدید در مسیر شما قرار دارد که می‌تواند شما را به جایی که می‌خواهید برساند.
       </div>
-      <div class="emoji">😊</div>
-      <p> Möge dein Tag voller Licht und Freude sein! </p>
+      <div class="emoji">🚀🚀🚀🚀</div>
     </div>
   </div>
 
   <script>
-    let clickCount = 0; // شمارش تعداد کلیک‌ها
     const button = document.getElementById("reveal-button");
     const hiddenMessage = document.getElementById("hidden-message");
 
     button.addEventListener("click", () => {
-      clickCount++; // افزایش تعداد کلیک‌ها
-      if (clickCount === 1) {
-        // نمایش پیام پس از ۳ بار کلیک
-        hiddenMessage.style.display = "block";
-        button.style.display = "none"; // حذف دکمه
-      }
+      hiddenMessage.style.display = "block"; // نمایش پیام
+      button.style.display = "none"; // حذف دکمه
     });
   </script>
 </body>
 </html>
+
